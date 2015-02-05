@@ -5,7 +5,7 @@ angular.module('scheduleApp', ['firebase'])
 .controller('mainController', function($scope, $firebase) {
   
   // connect to firebase 
-  var ref = new Firebase("https://burning-torch-4263.firebaseio.com/days");  
+  var ref = new Firebase("https://app-schedule.firebaseio.com/");  
 	// notice days added to the end of url, it will map out our data and will all be saved in the 'days' object in our database
   var fb = $firebase(ref);
 
@@ -34,6 +34,45 @@ angular.module('scheduleApp', ['firebase'])
       },
       tuesday: {
         name: 'Tuesday',
+        slots: {
+          0900: {
+            time: '9:00am',
+            booked: false
+          },
+          0110: {
+            time: '11:00am',
+            booked: false
+          }
+        }
+      },
+      wednesday: {
+        name: 'Wednesday',
+        slots: {
+          0900: {
+            time: '9:00am',
+            booked: false
+          },
+          0110: {
+            time: '11:00am',
+            booked: false
+          }
+        }
+      },
+      thursday: {
+        name: 'Thursday',
+        slots: {
+          0900: {
+            time: '9:00am',
+            booked: false
+          },
+          0110: {
+            time: '11:00am',
+            booked: false
+          }
+        }
+      },
+      friday: {
+        name: 'Friday',
         slots: {
           0900: {
             time: '9:00am',
